@@ -63,6 +63,9 @@ router.get('/signin', signin_get);
 // post signin credentials for validation
 router.post('/signin', signin_post);
 
+// post eggs collected that day
+router.post('/prodegg', production_post);
+
 // About page
 router.get('/services', services_get);
 

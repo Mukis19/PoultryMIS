@@ -1,4 +1,5 @@
 
+const Eggs = require('../models/eggs');
 const User = require('../models/models');
 const { handleErrors, createToken, maxAge } = require('./helper.js');
 
@@ -88,20 +89,16 @@ const production_get = (req, res) => {
 
 const production_post = async (req, res) => {
 
-    const { productionDate, eggNoProduced, } = req.body;
-    console.log(productionDate, eggNoProduced,)
+    const { productionDate, eggNoProduced } = req.body;
+    console.log(req.body)
     try {
-        const admin = await Admin.login(productionDate, eggNoProduced,)
+        const eggs = await Eggs.create({ productionDate: productionDate, noOfEggs: eggNoProduced });
+        console.log(eggs);
         // creating a jwt token
-        const token = createToken(eggProduction._id);
-        res.cookie('jwt', token, { httpOnly: true, maxAge: 1000 * maxAge });
-        res.status(200).json({Admin: eggProduction._id });
 
     } catch (err) {
-        console.log('Mistake detected')
-        const errors = handleErrors(err);
-        console.log(errors);
-        res.status(400).json({ errors });
+        console.log(err)
+
     }
 };
 
