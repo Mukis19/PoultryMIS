@@ -1,0 +1,34 @@
+<%- include('dashboard/header.ejs')%>
+<%- include('dashboard/side.ejs')%>
+
+    <div class="ProductionData">
+        <p></p>
+    </div>
+
+    <div class="salesForm">
+        <form method="post" class="form">
+            <div>
+                <label for="purchaseDate">Date</label>
+                <input type="date" class="form-control" id="purchaseDate" name="purchaseDate">
+            </div>
+                <div class="purchaseDate error"></div>
+
+            <div>
+                <label for="birdsNoPurchased">Number of Birds</label>
+                <input type="number" class="form-control" id="birdsNoPurchased" name="birdsNoPurchased">
+            </div>
+                <div class="birdsNoPurchased error"></div>
+
+            <div>
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" name="price">
+            </div>
+                <div class="price error"></div>
+
+            <div>
+                <button class="savebutton">Save</button>
+            </div>
+        </form>
+    </div>
+<%- include('dashboard/bottom.ejs')%>
+<%- include('dashboard/footer.ejs')%>

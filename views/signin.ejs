@@ -1,0 +1,28 @@
+<%- include('dashboard/header.ejs')%>
+    <div class="adminLogin">
+        <div class="imgAlign">
+           <img src="./images/logo.webp" height="35" width="60" alt="">
+           <p><em>Sign in</em></p>
+        </div>
+        <form method="post" class="form">
+
+            <div>
+                <label for="email" class="form-label">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email"></label>
+            </div>
+            <div class="email error"></div>
+
+            <div class="mt-2">
+                <label for="pwd" class="form-label">
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="password"></label>
+            </div>
+            <div class="pwd error"></div>
+
+            <div class="row mt-2">
+                <button class="btn btn-success px-4 col">login</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src="/js/signin.js" defer></script>
+    <%- include('dashboard/footer.ejs')%>

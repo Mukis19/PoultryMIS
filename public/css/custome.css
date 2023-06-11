@@ -1,0 +1,551 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.error{
+    color:red;
+}
+.create-account, .login{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+}
+.form{
+    width:300px;
+}
+.main {
+    min-height: 90vh;
+}
+.cart{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px; 
+    width: 35px;
+    height: 50px;
+}
+
+.search {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 35px;
+    height: 50px;
+}
+.nav-icon{
+    color: goldenrod;
+}
+
+.fa-solid{
+    color: goldenrod;
+}
+.userButton{
+    display: flex;
+    background-color: white;
+    color: goldenrod;
+    align-items: center;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+}
+
+
+.footer{
+    background-color: rgba(33, 31, 31, 0.852);
+    text-align: center;
+    color:white;
+}
+
+.service{
+    height:300px;
+    padding:0px 10vw; 
+    background-color: rgb(247, 211, 121);
+    margin:5px 0px;
+    display:grid;
+    column-gap:15px;
+    place-items: center;
+    grid-template-columns: 1fr 1.5fr;
+    color: goldenrod; 
+}
+
+
+/* content */
+.content{
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 30px;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* content TEXT */
+/* ........ LEFT SIDE....... */
+.content .content-left{
+    display: block;
+    width: 100%;
+}
+.content .content-left .info{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content .content-left .info h2{
+    font-size: 60px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+.content .content-left .info p{
+    font-size: 23px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+/* =========HOME PAGE CONTENT=========== */
+/* content */
+/* ==========Button========= */
+.content .content-left button{
+    padding: 10px 23px;
+    background-color:goldenrod;
+    color: #ffffff;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Content IMAGE */
+/* =========Right-side========== */
+.content .content-right{
+    display: block;
+    width: 100%;
+
+}
+.content .content-right img{
+    width: 500px;
+    height: auto;
+    position: relative;
+    border-radius: 500px;
+    user-select: none;
+    animation: rotate 10s linear infinite;
+}
+
+
+/* Content */
+/* =========ANIMATION========= */
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* ========CARDS======== */
+.category{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.category .list-items{
+    width: 90%;
+    position: relative;
+    margin-top: 50px;
+}
+
+.category .list-items h3{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+}
+
+.category .list-items .card-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.category .list-items .card{
+    width: 200px;
+    height: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background: #ffffff;
+    outline: 2px solid rgb(247, 211, 121);
+}
+
+.category .list-items .card img{
+    width: 100px;
+    height: auto;
+    bottom: 140px;
+    left: 50px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    box-shadow: 0 20px 20px rgb(247, 211, 121);
+    border-radius: 50%;
+}
+
+.category .list-items .card .food-title{
+    padding: 40px 0 10px;
+}
+
+.category .list-items .card .food-title h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.category .card .desc-food p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+.category .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.category .card .price span .plus-icon{
+    color: goldenrod;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ======  Scroll   ====== */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: goldenrod;
+}
+
+
+/* =========CART PAGE CSS========= */
+.container{
+    display: flex;
+    width: 98%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#root{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.sidebar{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.head{
+    background-color: goldenrod;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    padding: 15px;
+}
+.image-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+.bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+.info1{
+    font-size: 20px;
+    color: red;
+}
+button{
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: goldenrod;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+}
+button:hover{
+    background-color: #333;
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg{
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    cursor: pointer;
+    color: #333;
+}
+
+/* ===================== SERVICES PAGE ==================== */
+
+.servicesBody {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: arial;
+    transition: 0.5%;
+    margin-bottom: 20px;
+}
+
+.servicesHead h2 {
+    color: goldenrod;
+    font-weight: 400;
+}
+
+.servicesHead h1 {
+    color: goldenrod;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.servicesRow {
+    padding-top: 50px;
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicesBox {
+    width: 320px;
+    height: 450px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.servicesBox img {
+    width: 250px;
+}
+
+.servicesBox h3 {
+    font-size: 25px;
+    padding-top: 20px;
+    color: goldenrod;
+}
+
+.servicesBox h3 {
+    color: #4e746b;
+    padding-top: 20px;
+    line-height: 25px;
+}
+
+.servicesBox .serviceButton {
+    width: 150px;
+    height: 40px;
+    background: goldenrod;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.servicesBox .serviceButton:hover{
+    background: #fff;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+}
+
+/* ==================== ABOUT US PAGE ==================== */
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.aboutContent .aboutContentLeft {
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+}
+.aboutContent .aboutContentLeft .aboutontentinfo{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.aboutContent .aboutContentLeft .aboutontentinfo h4 {
+    font-size: 50px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+.aboutContent .aboutContentLeft .aboutontentinfo p {
+    font-size: 15px;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+.aboutContent .about-content-right {
+    display: block;
+    width: 100%;
+}
+.aboutContent .about-content-right img {
+    width: 450px;
+    height: auto;
+    position: relative;
+    border-radius: 5px;
+    user-select: none;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aboutBox {
+    width: 100%;
+    height: 150px;
+    padding-top: 50px;
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.aboutValues{
+    margin-left: 10px;
+}
+
+.aboutBo .aboutBox .aboutBox1 {
+    width: 250px;
+    height: 150px;
+    background-color: black;
+    color: aliceblue;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+.certification {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.certification .certification1{
+    margin-left: 10px;
+}
+.certification .certification1 p{
+    background-color: orange; 
+    color: aliceblue;
+}
+

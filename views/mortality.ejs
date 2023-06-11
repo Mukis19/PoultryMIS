@@ -1,0 +1,27 @@
+<%- include('dashboard/header.ejs')%>
+<%- include('dashboard/side.ejs')%>
+    <div class="ProductionData">
+        <p></p>
+    </div>
+        
+    <div class="productionForm">
+        <form method="post" class="form">
+            <div class="mb">
+                <label for="mortalityDate">Date</label>
+                <input type="date" class="form-control" id="mortalityDate" name="mortalityDate">
+            </div>
+                <div class="mortalityDate error"></div>
+
+            <div class="mt-2">
+                <label for="deathNo">Number of Deaths</label>
+                <input type="number" class="form-control" id="deathNo" name="deathNo">
+            </div>
+                <div class="deathNo error"></div>
+
+            <div>
+                <button class="savebutton">Save</button>
+            </div>
+        </form>
+    </div>
+<%- include('dashboard/bottom.ejs')%>
+<%- include('dashboard/footer.ejs')%>

@@ -1,0 +1,26 @@
+body{
+    padding:0px 0px;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-content: center; 
+} 
+.logo{
+    display:flex;
+    align-items: center;
+}
+.logo>a{
+    text-decoration: none;
+}
+.header>nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header>nav ul>li{
+    padding: 0px 10px;
+}
+.header>nav ul>li>a{
+    text-decoration: none; 
+}

@@ -1,0 +1,56 @@
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="dist/js/jquery.formset.js"> </script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="plugins/toastr/toastr.min.js' %"></script> -->
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- chart.min App -->
+<script src="dist/js/chart.min.js"></script>
+<script>
+    const data = {
+        labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [300, 50, 100],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const config = {
+        type: 'pie',
+        data: data,
+    };
+    new Chart(document.getElementById("homegraph"), config);
+</script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="dist/js/demo.js"></script>
+
+<script>
+    (function ($) {
+        $('.clickable-row').css('cursor', 'pointer');
+        $(".clickable-row").click(function () {
+            window.location = $(this).data("href");
+        });
+    })(jQuery)
+
+</script>
+
+
+
+
+</body>
+
+</html>

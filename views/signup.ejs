@@ -1,0 +1,77 @@
+<%- include('normalpartials/header.ejs')%>
+<div class="create-account">
+    <img src="./images/logo.webp" height="35" width="60" alt="">
+    <p><em>Create Account</em></p>
+    <p>Ensure you use a valid email</p>
+    <form  method="post" class="form">
+        <div class="mb">
+          <label for="username" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="username" name="username">
+        </div>
+        <div class="username error"></div>
+        <div class="mt-2">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="email error"></div>
+        <div class="mt-2">
+          <label for="tel" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="tel" name="tel">
+        </div>
+        <div class="tel error"></div>
+        <div class="mt-2">
+          <label for="pwd" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pwd" name="pwd">
+        </div>
+        <div class="pwd error"></div>
+        <div class="mt-2">
+          <label for="pwd1" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="pwd1" name="pwd1">
+        </div>
+        <div class="pwd1 error"></div>
+        <div class="row mt-2">
+          <button class="btn btn-primary px-4 col">submit</button>
+        </div>
+        <p class="col">Already have an account? <a href="/login">login</a></p>
+    </form>
+</div>
+<script>
+
+    const form = document.querySelector('.form');
+    const emailerror = document.querySelector('.email')
+    const usernameerror = document.querySelector('.username')
+    const telerror = document.querySelector('.tel')
+    const pwderror = document.querySelector('.pwd')
+    form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const email = form.email.value;
+        const tel = form.tel.value;
+        const username = form.username.value;
+        const pwd = form.pwd.value;
+        const pwd1 = form.pwd1.value;
+
+        try{
+            const res = await fetch('/signup', {
+                method: 'POST',
+                body: JSON.stringify({email,tel, username, pwd}),
+                headers: {'Content-Type': 'application/json'}
+            })
+            const data = await res.json()
+            if (data.errors){
+              emailerror.textContent = data.errors.email;
+              usernameerror.textContent = data.errors.username;
+              telerror.textContent = data.errors.tel;
+              pwderror.textContent = data.errors.pwd;
+
+            }
+            if (data.user){
+              location.assign('/login');
+            }
+            
+
+        }catch (err){
+            console.log(err);
+        }
+    })
+</script>
+<%- include('normalpartials/footer.ejs')%>

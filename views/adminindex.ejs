@@ -1,0 +1,78 @@
+<%- include('dashboard/header.ejs')%>
+    <%- include('dashboard/side.ejs')%>
+        <div class="headhello">
+            <h4>Hello, admin.</h4>
+            <p>Welcome to your dashboard</p>
+        </div>
+
+        <div class="maxRate">
+            <div class="rates">
+                <div class="ratesCard">
+                    <div class="birds">
+                        <p>No. of Birds</p>
+                        <p id="count">0</p>
+                    </div>
+                </div>
+                <div class="ratesCard">
+                    <div class="birds">
+                        <p>Mortality Rate</p>
+                        <p id="count">0</p>
+                    </div>
+                </div>
+                <div class="ratesCard">
+                    <div class="birds">
+                        <p>No. of Eggs</p>
+                        <p id="count">0</p>
+                    </div>
+                </div>
+                <div class="ratesCard">
+                    <div class="birds">
+                        <p>No. of Employees</p>
+                        <p id="count">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="down">
+            <div class="payroll">
+                <div class="tit">
+                    <p><b>Payroll Visualtion</b><br>Job titles and there respective salaries</p>
+                    <p><b>Titles and Salaries</b></p>
+                </div>
+                <canvas id="homegraph"></canvas>
+            </div>
+
+            <div class="payrol">
+
+                <div class="stat">
+                    <p><b>Stats</b><br>Statistics of different categories</p>
+                </div>
+
+                <div class="statistics">
+                    <div class="wages">
+                        <p>Total Wages</p>
+                    </div>
+                    <div class="wages" style="margin-left: 4%;">
+                        <p>Sales</p>
+                    </div>
+                </div>
+
+                <div class="statistics">
+                    <div class="wages">
+                        <p>Remaining Feed</p>
+                    </div>
+                    <div class="wages" style="margin-left: 4%;">
+                        <p>Eggs Left</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <%- include('dashboard/bottom.ejs')%>
+            <%- include('dashboard/footer.ejs')%>
+  

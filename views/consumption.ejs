@@ -1,0 +1,41 @@
+<%- include('dashboard/header.ejs')%>
+<%- include('dashboard/side.ejs')%>
+
+
+    <div class="ProductionData">
+        <p></p>
+    </div>
+
+    <div class="consumptionForm">
+        <form method="post" class="form">
+            <div>
+                <label for="consumption">Date</label>
+                <input type="date" class="form-control" id="consumption" name="consumption">
+            </div>
+                <div class="consumption error"></div>
+                
+            <div>
+                <label for="conQuantity">Quantity</label>
+                <input type="number" class="form-control" id="conQuantity" name="conQuantity">
+            </div>
+                <div class="conQuantity error"></div>
+
+            <div>
+                <label for="conFeedsPrice">Price</label>
+                <input type="number" class="form-control" id="conFeedsPrice" name="conFeedsPrice">
+            </div>
+                <div class="conFeedsPrice error"></div>
+
+                <div>
+                    <label for="employee">Employee Assigned</label>
+                    <input type="text" class="form-control" id="employee" name="employee">
+                </div>
+                <div class="employee error"></div>
+
+                <div>
+                    <button class="savebutton">Save</button>
+                </div>
+        </form>
+    </div>
+        <%- include('dashboard/bottom.ejs')%>
+            <%- include('dashboard/footer.ejs')%>

@@ -1,0 +1,25 @@
+<%- include('normalpartials/header.ejs')%>
+<div class="login">
+    <img src="./images/logo.webp" height="35" width="60" alt="">
+    <p><em>Login</em></p>
+    <p>Securely loginto your account</p>
+    <p>Dont share your credentials for data privacy</p>
+    <form method="post" class="form">
+        <div>
+          <label for="email" class="form-label">
+          <input type="email" class="form-control" id="email"name="email" placeholder="Email"></label>
+        </div>
+        <div class="email error"></div>
+        <div class="mt-2">
+          <label for="pwd" class="form-label">
+          <input type="password" class="form-control" id="pwd"name="pwd" placeholder="password"></label>
+        </div>
+        <div class="pwd error"></div>
+        <div class="row mt-2">
+          <button class="btn btn-success px-4 col">login</button>
+        </div>
+        <p class="col">You don't have account? <a href="/signup">signup</a></p>
+    </form>
+</div>
+<script src="/js/login.js" defer></script>
+<%- include('normalpartials/footer.ejs')%>

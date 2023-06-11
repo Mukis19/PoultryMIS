@@ -1,0 +1,46 @@
+<%- include('dashboard/header.ejs')%>
+<%- include('dashboard/side.ejs')%>
+
+    <div class="ProductionData">
+        <p></p>
+    </div>
+
+    <div class="payrollForm">
+        <form method="post" class="form">
+            <div>
+                <label for="employeeName">Full Name</label>
+                <input type="text" class="form-control" id="employeeName" name="employeeName">
+            </div>
+                <div class="employeeName error"></div>
+
+            <div>
+                <label for="employeeEmail">Email</label>
+                <input type="email" class="form-control" id="employeeEmail" name="employeeEmail">
+            </div>
+                <div class="employeeEmail error"></div>
+
+            <div>
+                <label for="telNo">Phone Number</label>
+                <input type="tel" class="form-control" id="telNo" name="telNo">
+            </div>
+                <div class="telNo error"></div>
+
+            <div>
+                <label for="job">Job</label>
+                <input type="text" class="form-control" id="job" name="job">
+            </div>
+                <div class="job error"></div>
+
+            <div>
+                <label for="salary">Salary</label>
+                <input type="text" class="form-control" id="salary" name="salary">
+            </div>
+                <div class="salary error"></div>
+                
+            <div>
+                <button class="savebutton">Save</button>
+            </div>
+        </form>
+    </div>
+<%- include('dashboard/bottom.ejs')%>
+<%- include('dashboard/footer.ejs')%>

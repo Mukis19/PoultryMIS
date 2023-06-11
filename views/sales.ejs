@@ -1,0 +1,33 @@
+<%- include('dashboard/header.ejs')%>
+<%- include('dashboard/side.ejs')%>
+    <div class="ProductionData">
+        <p></p>
+    </div>
+        
+    <div class="salesForm">
+        <form method="post" class="form">
+            <div>
+                <label for="salesDate">Date</label>
+                <input type="date" class="form-control" id="salesDate" name="salesDate">
+            </div>
+                <div class="production error"></div>
+
+            <div>
+                <label for="eggNoSold">Number of Eggs</label>
+                <input type="number" class="form-control" id="eggNoSold" name="eggNoSold">
+            </div>
+                <div class="eggNoSold error"></div>
+
+            <div>
+                <label for="revenue">Revenue</label>
+                <input type="number" class="form-control" id="revenue" name="revenue">
+            </div>
+                <div class="revenue error"></div>
+
+            <div>
+                <button class="savebutton">Save</button>
+            </div>
+        </form>
+    </div>
+<%- include('dashboard/bottom.ejs')%>
+<%- include('dashboard/footer.ejs')%>

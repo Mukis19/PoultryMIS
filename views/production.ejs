@@ -1,0 +1,28 @@
+<%- include('dashboard/header.ejs')%>
+<%- include('dashboard/side.ejs')%>
+
+    <div class="ProductionData">
+        <p></p>
+    </div>
+    
+    <div class="productionForm">
+        <form method="post" class="form">
+            <div>
+                <label for="productionDate">Date</label>
+                <input type="date" class="form-control" id="productionDate" name="productionDate">
+            </div>
+                <div class="productionDate error"></div>
+
+            <div class="mt-2">
+                <label for="eggNoProduced">Number of Eggs</label>
+                <input type="number" class="form-control" id="eggNoProduced" name="eggNoProduced">
+            </div>
+                <div class="eggNoProduced error"></div>
+
+            <div>
+                <button class="savebutton">Save</button>
+            </div>
+        </form>
+    </div>
+<%- include('dashboard/bottom.ejs')%>
+<%- include('dashboard/footer.ejs')%>
