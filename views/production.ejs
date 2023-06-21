@@ -2,7 +2,32 @@
     <%- include('dashboard/side.ejs')%>
 
         <div class="ProductionData">
-            <p></p>
+            <% if (eggsdata.length>0){%>
+                 <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>NUMBER OF EGGS</th>
+                                <th>EDIT</th>
+                                <th>DELETE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                <%eggsdata.forEach(item=>{%>
+                        
+                            <tr>
+                                <td><%=item.productionDate%></td>
+                                <td><%=item.noOfEggs%> eggs</td>
+                                <td><button class="btn btn-success">Edit</button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
+                            </tr>
+                        
+                <%})%>
+                        </tbody>
+                </table>
+            <%} else{%>
+            <h4>OOPS no student found👀</h4>
+            <%}%>
         </div>
 
         <div class="productionForm">

@@ -28,7 +28,7 @@ router.get('/birds', birds_get);
 router.get('/production', production_get);
 
 // post production credentials for validation
-router.post('/production', production_post);
+// router.post('/production', production_post);
 
 // Gets sales page
 router.get('/sales', sales_get);

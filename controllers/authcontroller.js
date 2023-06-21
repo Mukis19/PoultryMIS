@@ -13,7 +13,7 @@ const signup_post = async (req, res) => {
     console.log(req.body);
     const { username, email, tel, pwd } = req.body;
     try {
-        const user = await User.create({ username: username, email: email, tel: tel, pwd: pwd })
+        const user = await User.create({ username: username, email: email, tel: tel, pwd: pwd });
         const token = createToken(user._id);
         res.cookie('jwt', token, { httpOnly: true, maxAge: 1000 * maxAge });
         res.status(201).json({ user });
@@ -65,7 +65,7 @@ const signin_get = (req, res) => {
 const signin_post = async (req, res) => {
 
     const { email, pwd } = req.body;
-    console.log(email, pwd)
+    console.log(email, pwd);
     try {
         const admin = await Admin.login(email, pwd)
         // creating a jwt token
@@ -82,23 +82,30 @@ const signin_post = async (req, res) => {
 };
 
 // User accesses the production
-const production_get = (req, res) => {
-
-    res.render('production');
+const production_get = async(req, res) => {
+    const eggsdata = await Eggs.find();
+    res.render('production', {eggsdata:eggsdata});
 };
 
 const production_post = async (req, res) => {
+    console.log("Hello here");
+    console.log(req.body);
 
     const { productionDate, eggNoProduced } = req.body;
-    console.log(req.body)
+    console.log(productionDate, eggNoProduced );
     try {
         const eggs = await Eggs.create({ productionDate: productionDate, noOfEggs: eggNoProduced });
         console.log(eggs);
         // creating a jwt token
+        
+        // console.log(eggsdata);
+        // res.send(eggsdata);
+        const eggsdata = await Eggs.find();
+        res.render('production', {eggsdata:eggsdata});
+        // res.render('production');
 
     } catch (err) {
         console.log(err)
-
     }
 };
 
@@ -146,13 +153,11 @@ const feeds_get = (req, res) => {
 
 // User accesses the adminindex
 const adminindex_get = (req, res) => {
-
     res.render('adminindex');
 };
 
 // User accesses the sales
 const sales_get = (req, res) => {
-
     res.render('sales');
 };
 
